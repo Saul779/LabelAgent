@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: label-agent-config
+data:
+  APP_ENV: "prod"
+  MQ_BOOTSTRAP_SERVERS: "kafka.mq.svc.cluster.local:9092"
+  MQ_BACKEND: "kafka"
+  MQ_CONSUMER_GROUP: "label-agent-consumer"
+  MQ_INGRESS_TOPIC: "agent.task.ingress"
+  MQ_INGRESS_DLQ_TOPIC: "agent.task.ingress.dlq"
+  VECTOR_EVENT_TOPIC: "tag.created"
+  VECTOR_CONSUMER_GROUP: "label-agent-vector-worker"
+  MQ_CALLBACK_TOPIC_WHITELIST: "agent.task.callback"
+  TAG_SERVICE_BASE_URL: "http://tag-service.svc.cluster.local:8081"
+  MILVUS_PROXY_BASE_URL: "http://milvus-proxy.svc.cluster.local:8082"
+  OBJECT_STORAGE_ENDPOINT: "http://object-storage.svc.cluster.local:9000"
+  OBJECT_STORAGE_BUCKET: "label-agent-media"
+  CONFIG_CENTER_BASE_URL: "http://config-center.svc.cluster.local:8090"
+  LOG_LEVEL: "INFO"

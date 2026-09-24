@@ -1,0 +1,35 @@
+version: "3.9"
+# 生产参考编排：真实环境应使用 deploy/k8s；此文件用于单机/小规模部署验证。
+
+services:
+  api:
+    image: ${IMAGE_REPO:-label-agent}:${IMAGE_TAG:-latest}
+    env_file: ../.env
+    command: ["--mode", "api"]
+    restart: unless-stopped
+    ports: ["8000:8000"]
+    deploy:
+      resources:
+        limits: { cpus: "1.0", memory: 1g }
+
+  job-worker:
+    image: ${IMAGE_REPO:-label-agent}:${IMAGE_TAG:-latest}
+    env_file: ../.env
+    command: ["--mode", "job_worker"]
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+      resources:
+        limits: { cpus: "2.0", memory: 2g }
+
+  vector-worker:
+    image: ${IMAGE_REPO:-label-agent}:${IMAGE_TAG:-latest}
+    env_file: ../.env
+    command: ["--mode", "vector_worker"]
+    restart: unless-stopped
+
+  reconciliation-worker:
+    image: ${IMAGE_REPO:-label-agent}:${IMAGE_TAG:-latest}
+    env_file: ../.env
+    command: ["--mode", "reconciliation_worker"]
+    restart: unless-stopped

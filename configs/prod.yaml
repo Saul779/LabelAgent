@@ -1,0 +1,6 @@
+# 生产环境覆盖项
+observability:
+  otel_enabled: true
+
+mq:
+  backend: kafka

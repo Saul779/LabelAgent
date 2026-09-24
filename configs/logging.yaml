@@ -1,0 +1,24 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  json:
+    (): label_agent.core.logging.JsonFormatter
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: json
+    stream: ext://sys.stdout
+
+root:
+  level: INFO
+  handlers: [console]
+
+loggers:
+  label_agent:
+    level: INFO
+    handlers: [console]
+    propagate: false
+  aiokafka:
+    level: WARNING

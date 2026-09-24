@@ -1,0 +1,21 @@
+{
+  "task_id": "task-s1-manual-003",
+  "task_type": "mark_tag",
+  "payload_type": "certificate",
+  "payload": {
+    "scene": "S1",
+    "biz_id": "career-manual-001",
+    "event_id": "evt-s1-manual-001",
+    "data_version": 1,
+    "text": "",
+    "attachments": [
+      {
+        "type": "image",
+        "path": "E:/cc/files/pythonCodes/RealProject/LabelAgent/configs/fixtures/samples/samples_img/后端3.png"
+      }
+    ]
+  },
+  "priority": 2,
+  "timestamp": 1720000000000,
+  "callback_topic": "agent.task.callback"
+}

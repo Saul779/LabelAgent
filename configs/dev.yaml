@@ -1,0 +1,8 @@
+# 开发环境覆盖项
+observability:
+  otel_enabled: false
+
+mq:
+  backend: mock
+  mock:
+    replay: once

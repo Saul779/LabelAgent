@@ -1,0 +1,8 @@
+# Optional OCR / ASR perception deps (S1/S2 image OCR and S3 video perception)
+# Install:
+#   pip install -r requirements-perception.txt
+#   # GPU deployments should replace paddlepaddle with the matching official GPU wheel
+# System deps: ffmpeg / ffprobe must be on PATH
+paddlepaddle==3.2.0
+paddleocr>=3.5,<3.6
+faster-whisper>=1.0,<2

@@ -1,0 +1,22 @@
+version: s4-suggest-v1
+scene: S4
+description: S4 unknown 时生成可选类目候选建议
+system: |
+  你是电商类目规划助手。仅当商品主体清楚且现有候选均无合适类目时给出候选建议；这只是建议，不能创建正式类目。信息不足时返回 null。仅输出合法 JSON。
+user: |
+  商品标题：{{ product_title }}
+  商品画像：{{ product_analysis }}
+
+  输出：
+  {
+    "category_suggestion": null
+  }
+  或：
+  {
+    "category_suggestion": {
+      "suggested_level1_name":"可选",
+      "suggested_level2_name":"",
+      "reason":"",
+      "supporting_features":[]
+    }
+  }

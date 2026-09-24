@@ -1,0 +1,117 @@
+# 基础配置：各环境共享的默认值，环境专属文件（dev/staging/prod.yaml）按 key 覆盖
+# 关联设计文档 §10 配置与扩展点一览
+
+protocol:
+  version: v1                     # 切换 v1/v2 信封解析器，D006/A026
+
+scene:
+  s1:
+    auto_create_unmatched: false    # D013：MVP 默认不落库
+  s2:
+    auto_create_unmatched: false    # D013：MVP 默认不落库
+  s3:
+    auto_create_unmatched: false    # S3 MVP 默认旁路新标签创建，仅输出已有词表标签
+  s4:
+    category_retrieval_backend: local # local（MVP xlsx）| milvus（生产服务端类目向量库）
+    taxonomy_path: docs/在场电商平台商品分类信息.xlsx
+    persist_snapshot: true
+    snapshot_dir: var/taxonomy
+    classifier_model_alias: primary
+    reviewer_model_alias: reviewer  # 必须与 classifier 不同，降低复核锚定
+    max_images: 5
+    max_image_bytes: 20971520
+    media_allowed_domains: []       # 远程图片域名白名单；本地/data URL 不受此项影响
+
+tag:
+  domain:
+    mapping_source: config_center   # D008/D009：分类/标签域映射从配置中心加载，不写代码常量
+  name_type:
+    default_display: standard       # D002
+
+policy:
+  confidence:
+    version: provisional-rule-mvp-1 # D001，冻结前必须标注 provisional
+  review_router:
+    version: review-router-v1       # D010
+  certificate_match:
+    version: certificate-match-v2
+    top_k: 5
+    audit_threshold: 0.85
+  s4:
+    auto_pass_threshold: 0.85
+    retrieval_top_k: 20
+    rrf_k: 60
+
+tag_service:
+  deployment_mode: standalone_http  # standalone_http | embedded，D007
+
+inference:
+  default_model_alias: primary
+  models:
+    - alias: primary
+      provider: openai
+      model_name: qwen3.7-flash
+    - alias: reviewer
+      provider: openai
+      model_name: qwen-plus
+    - alias: fallback
+      provider: azure_openai
+      model_name: gpt-4o
+    - alias: local
+      provider: local_vllm
+      model_name: qwen2.5-14b-instruct
+  prompt_versions:
+    s3: s3-v3
+    t1: t1-v1
+    t1_classify: t1-classify-v1
+    t1_vision: t1-vision-v1
+    s1: s1-v2
+    s1_match: s1-match-v2
+    s2: s2-v3
+    s2_match: s2-match-v3
+    s4_vision: s4-vision-v1
+    s4_analysis: s4-analysis-v1
+    s4_classifier: s4-classify-v1
+    s4_reviewer: s4-review-v1
+    s4_search: s4-search-v1
+    s4_suggestion: s4-suggest-v1
+
+rag:
+  enabled: false                    # 扩展点，默认关闭，不影响现有固定管线
+
+perception:
+  # 生产环境按实际对象存储/CDN 主机名配置；空列表拒绝所有远程媒体 URL。
+  certificate_media_allowed_domains: []
+  certificate_image:
+    max_pixels: 40000000
+    dense_region_count: 12
+    dense_area_ratio: 0.12
+    small_text_height_ratio: 0.018
+    minimum_ocr_confidence: 0.45
+    ocr_context_max_chars: 12000
+
+observability:
+  otel_enabled: true
+  metrics_namespace: label_agent
+
+# MQ：MVP 默认 mock；切换 kafka 时只改 backend + 连接配置，不改业务代码
+mq:
+  backend: mock
+  poll_interval_sec: 1.0
+  mock:
+    ingress_fixture: configs/fixtures/mq_ingress_sample.json
+    replay: once
+    local_receipt_dir: var/receipts
+
+worker:
+  poll_interval_sec: 1.0
+  max_attempts: 5
+  publish_max_attempts: 5
+  receipt_max_payload_bytes: 900000
+  vector_poll_timeout_ms: 1000
+  vector_reconciliation_batch_size: 100
+  reconciliation_poll_interval_sec: 60.0
+
+vector:
+  tag_collection: tag_vectors
+  product_category_collection: product_category_vectors

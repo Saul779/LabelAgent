@@ -1,0 +1,66 @@
+dictionary_snapshot_version: dict-career-2026-07-28
+domain: career
+items:
+  - id: career-001
+    display_name: Python工程师
+    aliases: [Python开发工程师, Python后端工程师]
+  - id: career-002
+    display_name: Java工程师
+    aliases: [Java开发工程师, Java后端]
+  - id: career-003
+    display_name: 前端工程师
+    aliases: [Web前端开发, 前端开发工程师]
+  - id: career-004
+    display_name: 测试工程师
+    aliases: [软件测试工程师, QA工程师]
+  - id: career-005
+    display_name: 运维工程师
+    aliases: [系统运维, SRE工程师]
+  - id: career-006
+    display_name: 数据分析师
+    aliases: [数据专员, Data Analyst]
+  - id: career-007
+    display_name: 算法工程师
+    aliases: [机器学习工程师, AI算法工程师]
+  - id: career-008
+    display_name: 产品经理
+    aliases: [产品专员, PM]
+  - id: career-009
+    display_name: UI设计师
+    aliases: [视觉设计师, 界面设计师]
+  - id: career-010
+    display_name: 嵌入式工程师
+    aliases: [嵌入式开发, 固件工程师]
+  - id: career-011
+    display_name: 网络安全工程师
+    aliases: [安全工程师, 信息安全工程师]
+  - id: career-012
+    display_name: 数据库管理员
+    aliases: [DBA, 数据库工程师]
+  - id: career-013
+    display_name: 架构师
+    aliases: [系统架构师, 技术架构师]
+  - id: career-014
+    display_name: 项目经理
+    aliases: [IT项目经理, 交付经理]
+  - id: career-015
+    display_name: 技术支持工程师
+    aliases: [售后支持, 技术支持]
+  - id: career-016
+    display_name: 云计算工程师
+    aliases: [云平台工程师, Cloud Engineer]
+  - id: career-017
+    display_name: 大数据工程师
+    aliases: [大数据开发, 数据平台工程师]
+  - id: career-018
+    display_name: 移动端开发工程师
+    aliases: [Android工程师, iOS工程师]
+  - id: career-019
+    display_name: 游戏开发工程师
+    aliases: [游戏客户端开发, 游戏服务端开发]
+  - id: career-020
+    display_name: 区块链工程师
+    aliases: [智能合约开发, Web3工程师]
+  - id: career-021
+    display_name: 软件工程师
+    aliases: [软件开发工程师, 软件开发]

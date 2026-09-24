@@ -1,0 +1,107 @@
+# S3 内容分类与标签 MVP 词表；仅用于本地联调和自动化测试。
+dictionary_snapshot_version: dict-content-2026-08-12
+domain: content
+categories:
+  - id: category-uncategorized
+    name: 未分类
+    level: 1
+  - id: category-campus
+    name: 校园生活
+    level: 1
+  - id: category-food
+    name: 美食
+    level: 1
+  - id: category-photography
+    name: 摄影
+    level: 1
+  - id: category-travel
+    name: 旅行
+    level: 1
+  - id: category-pet
+    name: 萌宠
+    level: 1
+  - id: category-fitness
+    name: 运动健身
+    level: 1
+  - id: category-technology
+    name: 科技数码
+    level: 1
+  - id: category-entertainment
+    name: 影视娱乐
+    level: 1
+  - id: category-daily-life
+    name: 日常生活
+    level: 1
+  - id: category-photo-landscape
+    name: 风光摄影
+    level: 2
+    parent_id: category-photography
+  - id: category-photo-portrait
+    name: 人像摄影
+    level: 2
+    parent_id: category-photography
+  - id: category-travel-domestic
+    name: 国内旅行
+    level: 2
+    parent_id: category-travel
+tags:
+  - id: tag-photography
+    display_name: 摄影
+    aliases: [拍照, 照片, 摄像]
+  - id: tag-film-style
+    display_name: 胶片风
+    aliases: [复古胶片, 胶片感, 电影感]
+  - id: tag-landscape
+    display_name: 风光
+    aliases: [风景, 自然风景]
+  - id: tag-portrait
+    display_name: 人像
+    aliases: [人物写真, 肖像]
+  - id: tag-campus
+    display_name: 校园
+    aliases: [学校生活, 大学生活]
+  - id: tag-food
+    display_name: 美食
+    aliases: [好吃的, 探店, 吃饭]
+  - id: tag-home-cooking
+    display_name: 家常菜
+    aliases: [下厨, 做饭, 烹饪]
+  - id: tag-travel
+    display_name: 旅行
+    aliases: [旅游, 出游, 游记]
+  - id: tag-city-walk
+    display_name: 城市漫步
+    aliases: [Citywalk, 城市散步]
+  - id: tag-pet
+    display_name: 萌宠
+    aliases: [宠物, 毛孩子]
+  - id: tag-cat
+    display_name: 猫咪
+    aliases: [猫猫, 小猫]
+  - id: tag-dog
+    display_name: 狗狗
+    aliases: [小狗, 汪星人]
+  - id: tag-fitness
+    display_name: 健身
+    aliases: [锻炼, 训练]
+  - id: tag-running
+    display_name: 跑步
+    aliases: [慢跑, 夜跑]
+  - id: tag-digital
+    display_name: 数码
+    aliases: [电子产品, 数码产品]
+  - id: tag-ai
+    display_name: 人工智能
+    aliases: [AI, 大模型]
+  - id: tag-movie
+    display_name: 电影
+    aliases: [影片, 观影]
+  - id: tag-music
+    display_name: 音乐
+    aliases: [歌曲, 听歌]
+  - id: tag-daily
+    display_name: 日常
+    aliases: [生活记录, 日常生活]
+  - id: tag-weekend
+    display_name: 周末
+    aliases: [周末生活, 周末去哪儿]

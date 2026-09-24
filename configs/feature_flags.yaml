@@ -1,0 +1,8 @@
+# 独立于 base/env 配置的高频变更开关，可由配置中心热更新覆盖。
+# 命名统一为 "<scene>.<capability>.enabled" 或具体参数，避免与 base.yaml 中稳定配置混淆。
+#
+# 注意：下列开关目前仅为产品预留位，源码尚未读取；接入前请同步实现 settings/消费逻辑，
+# 否则修改本文件不会改变运行行为。
+
+rag.enabled: false
+tools.dynamic_invocation.enabled: false  # 未来 ReAct 式工具调用开关，当前固定管线不使用

@@ -1,0 +1,5 @@
+juice.jpg	E:\cc\files\pythonCodes\RealProject\LabelAgent\configs\fixtures\samples\samples_img\juice.jpg
+sample_1.webp	E:\cc\files\pythonCodes\RealProject\LabelAgent\configs\fixtures\samples\samples_img\sample_1.webp
+后端1.png	E:\cc\files\pythonCodes\RealProject\LabelAgent\configs\fixtures\samples\samples_img\后端1.png
+后端2.png	E:\cc\files\pythonCodes\RealProject\LabelAgent\configs\fixtures\samples\samples_img\后端2.png
+后端3.png	E:\cc\files\pythonCodes\RealProject\LabelAgent\configs\fixtures\samples\samples_img\后端3.png

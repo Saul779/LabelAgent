@@ -1,0 +1,129 @@
+dictionary_snapshot_version: dict-certificate-2026-08-18
+domain: certificate
+items:
+  - id: certificate-001
+    display_name: PMP项目管理专业人士认证
+    aliases: [PMP, Project Management Professional]
+    metadata:
+      organization: Project Management Institute
+      category: 项目管理
+      description: PMI颁发的项目管理专业人士认证
+      skills: [项目管理]
+  - id: certificate-002
+    display_name: PMI敏捷管理专业人士认证
+    aliases: [PMI-ACP, Agile Certified Practitioner]
+    metadata:
+      organization: Project Management Institute
+      category: 敏捷项目管理
+      description: PMI颁发的敏捷项目管理认证
+      skills: [敏捷项目管理]
+  - id: certificate-003
+    display_name: AWS认证解决方案架构师-助理级
+    aliases:
+      - AWS Certified Solutions Architect - Associate
+      - AWS SAA
+    metadata:
+      organization: Amazon Web Services
+      category: 云计算
+      description: AWS解决方案架构师助理级认证
+      skills: [云架构, AWS]
+  - id: certificate-004
+    display_name: AWS认证解决方案架构师-专业级
+    aliases:
+      - AWS Certified Solutions Architect - Professional
+      - AWS SAP
+    metadata:
+      organization: Amazon Web Services
+      category: 云计算
+      description: AWS解决方案架构师专业级认证
+      skills: [云架构, AWS]
+  - id: certificate-005
+    display_name: AWS认证开发人员-助理级
+    aliases:
+      - AWS Certified Developer - Associate
+      - AWS DVA
+    metadata:
+      organization: Amazon Web Services
+      category: 云计算
+      description: AWS开发人员助理级认证
+      skills: [云开发, AWS]
+  - id: certificate-006
+    display_name: Microsoft Azure管理员助理认证
+    aliases: [Microsoft Certified Azure Administrator Associate, AZ-104]
+    metadata:
+      organization: Microsoft
+      category: 云计算
+      description: Microsoft Azure管理员助理认证
+      skills: [Azure, 云运维]
+  - id: certificate-007
+    display_name: Microsoft Azure解决方案架构师专家认证
+    aliases: [Microsoft Certified Azure Solutions Architect Expert, AZ-305]
+    metadata:
+      organization: Microsoft
+      category: 云计算
+      description: Microsoft Azure解决方案架构师专家认证
+      skills: [Azure, 云架构]
+  - id: certificate-008
+    display_name: Google Cloud专业云架构师认证
+    aliases: [Google Cloud Professional Cloud Architect, GCP PCA]
+    metadata:
+      organization: Google Cloud
+      category: 云计算
+      description: Google Cloud专业云架构师认证
+      skills: [GCP, 云架构]
+  - id: certificate-009
+    display_name: Kubernetes管理员认证
+    aliases: [Certified Kubernetes Administrator, CKA]
+    metadata:
+      organization: Cloud Native Computing Foundation
+      category: 云原生
+      description: CNCF Kubernetes管理员认证
+      skills: [Kubernetes, 容器编排]
+  - id: certificate-010
+    display_name: Kubernetes应用开发者认证
+    aliases: [Certified Kubernetes Application Developer, CKAD]
+    metadata:
+      organization: Cloud Native Computing Foundation
+      category: 云原生
+      description: CNCF Kubernetes应用开发者认证
+      skills: [Kubernetes, 云原生开发]
+  - id: certificate-011
+    display_name: Kubernetes安全专家认证
+    aliases: [Certified Kubernetes Security Specialist, CKS]
+    metadata:
+      organization: Cloud Native Computing Foundation
+      category: 云原生安全
+      description: CNCF Kubernetes安全专家认证
+      skills: [Kubernetes, 容器安全]
+  - id: certificate-012
+    display_name: 注册信息系统安全专家认证
+    aliases: [Certified Information Systems Security Professional, CISSP]
+    metadata:
+      organization: ISC2
+      category: 信息安全
+      description: ISC2注册信息系统安全专家认证
+      skills: [信息安全]
+  - id: certificate-013
+    display_name: 思科认证网络工程师
+    aliases: [Cisco Certified Network Associate, CCNA]
+    metadata:
+      organization: Cisco
+      category: 网络技术
+      description: Cisco网络工程师认证
+      skills: [计算机网络]
+  - id: certificate-014
+    display_name: Oracle Java SE 11开发者专业认证
+    aliases: [Oracle Certified Professional Java SE 11 Developer, OCP Java 11]
+    metadata:
+      organization: Oracle
+      category: 软件开发
+      description: Oracle Java SE 11开发者专业认证
+      skills: [Java]
+  - id: certificate-015
+    display_name: 专业Scrum主管认证
+    aliases: [Professional Scrum Master I, PSM I]
+    metadata:
+      organization: Scrum.org
+      category: 敏捷项目管理
+      description: Scrum.org专业Scrum主管一级认证
+      skills: [Scrum, 敏捷项目管理]

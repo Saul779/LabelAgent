@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-agent-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: label-agent, component: api }
+  template:
+    metadata:
+      labels: { app: label-agent, component: api }
+    spec:
+      containers:
+        - name: api
+          image: label-agent:latest
+          args: ["--mode", "api"]
+          ports: [{ containerPort: 8000 }]
+          envFrom:
+            - configMapRef: { name: label-agent-config }
+            - secretRef: { name: label-agent-secret }
+          readinessProbe:
+            httpGet: { path: /health/ready, port: 8000 }
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: { path: /health/live, port: 8000 }
+            initialDelaySeconds: 5
+            periodSeconds: 15
+          resources:
+            requests: { cpu: "250m", memory: "256Mi" }
+            limits: { cpu: "1", memory: "1Gi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: label-agent-api
+spec:
+  selector: { app: label-agent, component: api }
+  ports: [{ port: 8000, targetPort: 8000 }]

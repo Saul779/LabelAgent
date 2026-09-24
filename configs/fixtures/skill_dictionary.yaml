@@ -1,0 +1,63 @@
+dictionary_snapshot_version: dict-skill-2026-07-28
+domain: skill
+items:
+  - id: skill-001
+    display_name: Python编程
+    aliases: [Python开发, Python语言]
+  - id: skill-002
+    display_name: Java编程
+    aliases: [Java开发, Java语言]
+  - id: skill-003
+    display_name: MySQL
+    aliases: [MySQL建表, MySQL数据库]
+  - id: skill-004
+    display_name: Redis
+    aliases: [Redis缓存, Redis集群运维]
+  - id: skill-005
+    display_name: Linux运维
+    aliases: [Linux系统管理, Shell脚本]
+  - id: skill-006
+    display_name: Docker
+    aliases: [容器化, Docker部署]
+  - id: skill-007
+    display_name: Kubernetes
+    aliases: [K8s, 容器编排]
+  - id: skill-008
+    display_name: 机器学习
+    aliases: [ML, 机器学习建模]
+  - id: skill-009
+    display_name: 深度学习
+    aliases: [Deep Learning, 神经网络]
+  - id: skill-010
+    display_name: 数据分析
+    aliases: [数据处理, 数据清洗]
+  - id: skill-011
+    display_name: SQL
+    aliases: [结构化查询, SQL调优]
+  - id: skill-012
+    display_name: Git
+    aliases: [版本控制, Git协作]
+  - id: skill-013
+    display_name: React
+    aliases: [React开发, React前端]
+  - id: skill-014
+    display_name: Vue
+    aliases: [Vue.js, Vue前端]
+  - id: skill-015
+    display_name: TypeScript
+    aliases: [TS, TypeScript开发]
+  - id: skill-016
+    display_name: C语言
+    aliases: [C编程, C开发]
+  - id: skill-017
+    display_name: Go语言
+    aliases: [Golang, Go开发]
+  - id: skill-018
+    display_name: 接口测试
+    aliases: [API测试, 自动化接口测试]
+  - id: skill-019
+    display_name: 网络安全
+    aliases: [渗透测试基础, 安全防护]
+  - id: skill-020
+    display_name: 项目管理
+    aliases: [敏捷项目管理, Scrum]

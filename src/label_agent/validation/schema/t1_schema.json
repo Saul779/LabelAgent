@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TaskDetailResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "accept_mode",
+    "biz_task_type",
+    "relation_target",
+    "relation_target_detail",
+    "required_skills",
+    "service_mode",
+    "extraction_errors"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "accept_mode": { "enum": ["public", "specified"] },
+    "biz_task_type": { "enum": ["relationship", "skill", "dessert"] },
+    "relation_target": { "enum": ["person", "other_object", null] },
+    "relation_target_detail": { "type": ["string", "null"] },
+    "required_skills": { "type": "array", "items": { "type": "string" } },
+    "service_mode": { "enum": ["offline", "non_offline", null] },
+    "extraction_errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "field", "message", "retryable"],
+        "properties": {
+          "code": { "type": "string" },
+          "field": { "type": ["string", "null"] },
+          "message": { "type": "string" },
+          "retryable": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

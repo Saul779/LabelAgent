@@ -1,0 +1,30 @@
+[
+  {
+    "task_id": "task-mvp-s1-001",
+    "task_type": "mark_tag",
+    "payload_type": "certificate",
+    "payload": {
+      "scene": "S1",
+      "biz_id": "career-sample-001",
+      "event_id": "evt-mvp-s1-001",
+      "text": "持有软件工程师职业资格证书。\n工作内容包括使用 Python 进行后端开发，熟悉 MySQL 数据库设计与 Redis 缓存，\n参与 Docker 容器化部署，具备接口联调与单元测试经验。\n曾担任 Python 开发工程师，负责业务系统维护与性能优化。\n"
+    },
+    "priority": 2,
+    "timestamp": 1720000000000,
+    "callback_topic": "agent.task.callback"
+  },
+  {
+    "task_id": "task-mvp-s2-001",
+    "task_type": "mark_tag",
+    "payload_type": "certificate",
+    "payload": {
+      "scene": "S2",
+      "biz_id": "certificate-sample-001",
+      "event_id": "evt-mvp-s2-001",
+      "text": "证书名称：PMP（Project Management Professional）。发证机构：Project Management Institute。证书编号：PMP123456。"
+    },
+    "priority": 2,
+    "timestamp": 1720000001000,
+    "callback_topic": "agent.task.callback"
+  }
+]

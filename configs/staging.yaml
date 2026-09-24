@@ -1,0 +1,6 @@
+# 预发环境覆盖项：与生产尽量一致
+observability:
+  otel_enabled: true
+
+mq:
+  backend: kafka

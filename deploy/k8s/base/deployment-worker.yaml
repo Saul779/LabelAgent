@@ -1,0 +1,69 @@
+# 每种 Worker 独立 Deployment，便于按角色单独扩缩容。
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-agent-job-worker
+spec:
+  replicas: 3
+  selector:
+    matchLabels: { app: label-agent, component: job-worker }
+  template:
+    metadata:
+      labels: { app: label-agent, component: job-worker }
+    spec:
+      containers:
+        - name: job-worker
+          image: label-agent:latest
+          args: ["--mode", "job_worker"]
+          envFrom:
+            - configMapRef: { name: label-agent-config }
+            - secretRef: { name: label-agent-secret }
+          resources:
+            requests: { cpu: "500m", memory: "512Mi" }
+            limits: { cpu: "2", memory: "2Gi" }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-agent-vector-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: label-agent, component: vector-worker }
+  template:
+    metadata:
+      labels: { app: label-agent, component: vector-worker }
+    spec:
+      containers:
+        - name: vector-worker
+          image: label-agent:latest
+          args: ["--mode", "vector_worker"]
+          envFrom:
+            - configMapRef: { name: label-agent-config }
+            - secretRef: { name: label-agent-secret }
+          resources:
+            requests: { cpu: "200m", memory: "256Mi" }
+            limits: { cpu: "1", memory: "1Gi" }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-agent-reconciliation-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: label-agent, component: reconciliation-worker }
+  template:
+    metadata:
+      labels: { app: label-agent, component: reconciliation-worker }
+    spec:
+      containers:
+        - name: reconciliation-worker
+          image: label-agent:latest
+          args: ["--mode", "reconciliation_worker"]
+          envFrom:
+            - configMapRef: { name: label-agent-config }
+            - secretRef: { name: label-agent-secret }
+          resources:
+            requests: { cpu: "100m", memory: "256Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
