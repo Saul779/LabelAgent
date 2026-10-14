@@ -103,6 +103,9 @@ bash scripts/bootstrap_dev_env.sh
 
 ## 使用方法
 
+本地调试、Docker 依赖/应用容器，以及单独触发 S1、S2、S3、S4、T1 的步骤见
+[`docs/运行指南.md`](docs/运行指南.md)。
+
 ```bash
 # 启动运维/管理 API（健康检查等；非任务投递入口）
 make run-api
